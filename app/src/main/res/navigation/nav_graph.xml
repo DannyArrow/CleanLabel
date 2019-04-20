@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blankFragment">
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.cleanlabel.Fragments.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_blankFragment_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_blankFragment_to_registerbtn"
+            app:destination="@id/registerbtn" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.cleanlabel.Fragments.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_mainpage"
+            app:destination="@id/mainpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/verify"
+        android:name="com.example.cleanlabel.Fragments.Verify"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify" >
+        <action
+            android:id="@+id/action_verify_to_verifyCode"
+            app:destination="@id/verifyCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyCode"
+        android:name="com.example.cleanlabel.Fragments.VerifyCode"
+        android:label="fragment_verify_code"
+        tools:layout="@layout/fragment_verify_code" >
+        <action
+            android:id="@+id/action_verifyCode_to_zipCode"
+            app:destination="@id/zipCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerbtn"
+        android:name="com.example.cleanlabel.Fragments.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_verify"
+            app:destination="@id/verify" />
+    </fragment>
+    <fragment
+        android:id="@+id/prefrence"
+        android:name="com.example.cleanlabel.Fragments.Prefrence"
+        android:label="fragment_prefrence"
+        tools:layout="@layout/fragment_prefrence" >
+        <action
+            android:id="@+id/action_prefrence_to_scheduleDelivery"
+            app:destination="@id/scheduleDelivery" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleDelivery"
+        android:name="com.example.cleanlabel.Fragments.ScheduleDelivery"
+        android:label="fragment_schedule_delivery"
+        tools:layout="@layout/fragment_schedule_delivery" >
+        <action
+            android:id="@+id/action_scheduleDelivery_to_orderSummary"
+            app:destination="@id/orderSummary" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSummary"
+        android:name="com.example.cleanlabel.Fragments.OrderSummary"
+        android:label="fragment_order_summary"
+        tools:layout="@layout/fragment_order_summary" >
+        <action
+            android:id="@+id/action_orderSummary_to_payment"
+            app:destination="@id/payment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payment"
+        android:name="com.example.cleanlabel.Fragments.Payment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_payment_to_mainpage"
+            app:destination="@id/mainpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainpage"
+        android:name="com.example.cleanlabel.Fragments.Mainpage"
+        android:label="fragment_mainpage"
+        tools:layout="@layout/fragment_mainpage" >
+        <action
+            android:id="@+id/action_mainpage_to_order_History"
+            app:destination="@id/order_History" />
+        <action
+            android:id="@+id/action_mainpage_to_contact_us"
+            app:destination="@id/contact_us" />
+        <action
+            android:id="@+id/action_mainpage_to_accountsetting"
+            app:destination="@id/accountsetting" />
+        <action
+            android:id="@+id/action_mainpage_to_referals"
+            app:destination="@id/referals" />
+    </fragment>
+    <fragment
+        android:id="@+id/referals"
+        android:name="com.example.cleanlabel.Fragments.Referals"
+        android:label="fragment_referals"
+        tools:layout="@layout/fragment_referals" />
+    <fragment
+        android:id="@+id/order_History"
+        android:name="com.example.cleanlabel.Fragments.Order_History"
+        android:label="fragment_order__history"
+        tools:layout="@layout/fragment_order__history" />
+    <fragment
+        android:id="@+id/accountsetting"
+        android:name="com.example.cleanlabel.Fragments.accountsetting"
+        android:label="fragment_accountsetting"
+        tools:layout="@layout/fragment_accountsetting" />
+    <fragment
+        android:id="@+id/contact_us"
+        android:name="com.example.cleanlabel.Fragments.contact_us"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/zipCode"
+        android:name="com.example.cleanlabel.Fragments.ZipCode"
+        android:label="fragment_zip_code"
+        tools:layout="@layout/fragment_zip_code" >
+        <action
+            android:id="@+id/action_zipCode_to_prefrence2"
+            app:destination="@id/prefrence" />
+    </fragment>
+</navigation>

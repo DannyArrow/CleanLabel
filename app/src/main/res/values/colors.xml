@@ -1,0 +1,21 @@
+
+<resources>
+    xmlns:tools="http://schemas.android.com/tools"
+
+    <color name="colorPrimary">#4D008577</color>
+    <color name="colorPrimaryDark">#4DFFFFFF</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="complimentary">#FF9999</color>
+    <color name="color_secondary">#99FFFF</color>
+    <color name="button_color">#CC7CF597</color>
+    <color name="number_color">#37474F</color>
+    <color name="agua_blue">#0abde3</color>
+    <color name="bright_light_blue">#3ad4f6</color>
+    <color name="bright_cyan">#48dbfb</color>
+    <color name="whitee">#FFFFFF</color>
+    <color name="powder_blue">#c8d6e5</color>
+    <color name="card_shadow">#29000000</color>
+    <color name="mtrl_textinput_default_box_stroke_color">@color/powder_blue</color>
+
+
+</resources>

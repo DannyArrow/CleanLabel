@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Clean Label</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_settings">FQA</string>
+    <string name="onboarding_one_header">We make your life easier</string>
+    <string name="onboarding_one_description">By handling all your laundry needs we give you healthier cleaner way of life.</string>
+    <string name="onboarding_two_header">Simply place an order</string>
+    <string name="onboarding_two_description">Set your location, set a convenient time and our driver will be on the way. Don\'t worry, we will bring the bag just in time.</string>
+    <string name="onboarding_three_header">Receive your order</string>
+    <string name="onboarding_three_description">Perfect cleaning results, toxin free, fresh smell, feels like new and in case you\'re wondering you are not harming our planet during the process.</string>
+    <string name="sign_up_today_for_free">Sign up today, for free!</string>
+</resources>

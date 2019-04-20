@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Mainpage">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/Contact_button"
+        android:layout_width="149dp"
+        android:layout_height="83dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="277dp"
+        android:gravity="center"
+        android:text="Contact us"
+        android:textSize="20dp" />
+
+
+
+    <Button
+        android:id="@+id/Account_Setting_Button"
+        android:layout_width="149dp"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="280dp"
+        android:gravity="center"
+        android:text="Account Setting"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/Referal_Button"
+        android:layout_width="149dp"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="406dp"
+        android:gravity="center"
+        android:text="Referal"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/OrderHistory_button"
+        android:layout_width="149dp"
+        android:layout_height="83dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginBottom="403dp"
+        android:gravity="center"
+        android:text="Order History"
+        android:textSize="20dp" />
+
+</RelativeLayout>
