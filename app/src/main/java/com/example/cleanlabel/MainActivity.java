@@ -1,6 +1,7 @@
 package com.example.cleanlabel;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.*;
 
@@ -19,6 +20,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.cleanlabel.Utility.Firebaseauth;
+import com.example.cleanlabel.Utility.Firebaseauthimpl;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+
 
 public class MainActivity extends AppCompatActivity {
     public  Menu menu;
@@ -32,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ToolbarManager toolbarManager = new ToolbarManager(this);
 
-        NavController navController = (NavController) Navigation.findNavController(this,R.id.my_nav_host_fragment);
+        NavController navController = Navigation.findNavController(this,R.id.my_nav_host_fragment);
         navController.addOnNavigatedListener(new NavController.OnNavigatedListener() {
             @Override
             public void onNavigated(@NonNull NavController controller, @NonNull NavDestination destination) {
@@ -83,6 +91,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.w("sign in intent", "start Activity");
+
+        Firebaseauthimpl firebaseaut = Firebaseauthimpl.getInstance();
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == 65543) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+
+                firebaseaut.firebaseAuthWithGoogle(account);
+            } catch (ApiException e) {
+                // Google Sign In failed, update UI appropriately
+                Log.w("exception google", "Google sign in failed", e);
+                // ...
+            }
+        }
     }
 
 

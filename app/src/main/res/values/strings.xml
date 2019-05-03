@@ -11,4 +11,9 @@
     <string name="onboarding_three_header">Receive your order</string>
     <string name="onboarding_three_description">Perfect cleaning results, toxin free, fresh smell, feels like new and in case you\'re wondering you are not harming our planet during the process.</string>
     <string name="sign_up_today_for_free">Sign up today, for free!</string>
+    <string name="login_second_txt">Welcome back! Lets clean your laundry the right\n way.</string>
+    <string name="register_txt">Sign up today, for free!</string>
+    <string name="facebook_app_id">274064250210325</string>
+    <string name="fb_login_protocol_scheme">fb274064250210325</string>
+
 </resources>

@@ -12,6 +12,7 @@
 
 
     <ImageView
+        android:layout_marginLeft="10dp"
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="10dp"
         android:gravity="fill_vertical"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent">

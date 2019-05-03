@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:background="@color/whitee"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:background="@drawable/items_bgs"
+            android:layout_width="180dp"
+            android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="116dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/detergent_two" />
+
+            <TextView
+                android:id="@+id/txtview"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imageView5"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginBottom="-15dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:lineHeight="12sp"
+                android:lineSpacingExtra="2sp"
+                android:text="Laundry Detergent"
+                android:textColor="@color/powder_blue"
+                android:textSize="10sp"
+                tools:text="Laundry Detergent" />
+
+            <TextView
+                android:id="@+id/txtview_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtview"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:lineHeight="14sp"
+                android:lineSpacingExtra="2sp"
+                android:text="Seventh Generation Ultra Stains Power"
+                android:textColor="#222f3e"
+                android:textSize="12sp"
+                tools:text="Seventh Generation Ultra Stains Power" />
+
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtview_2"
+
+                android:layout_marginStart="9.5dp"
+                android:layout_marginLeft="9.5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="13.5dp"
+                android:layout_marginRight="13.5dp"
+                android:fontFamily="@font/sf_pro_display_light"
+
+
+                android:lineSpacingExtra="2sp"
+
+                android:text="Ultra Power Plus natural laundry detergent \n Free and clear unscented formula \n With added PlantTech stain lifting"
+                android:textColor="#576574"
+                android:textSize="8sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:lineSpacingExtra="2sp"
+                android:text="$1.50"
+                android:textStyle="bold"
+                android:textColor="#222f3e"
+                android:textSize="14sp"
+                tools:text="$1.50" />
+
+
+        </RelativeLayout>
+
+
+</LinearLayout>

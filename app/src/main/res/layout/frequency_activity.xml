@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitee"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_fours"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:layout_marginTop="15dp"
+        android:gravity="fill_vertical"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_marginLeft="25dp"
+            android:id="@+id/logo_above"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:lineHeight="21sp"
+            android:lineSpacingExtra="3sp"
+            android:text="Frequency"
+            android:textColor="@color/color_1"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Frequency" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_above">
+
+
+            <TextView
+                android:layout_marginLeft="25dp"
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:lineSpacingExtra="2sp"
+                android:text="Select Frequency"
+                android:textColor="@color/color_2"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo_above"
+                tools:text="Select Frequency" />
+
+            <LinearLayout
+              android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/check_box"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_round_selector"
+
+
+                        android:checked="true"
+                        android:textColor="@color/whitee" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Every week"
+                        android:textColor="@color/color_2"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+
+
+                        android:id="@+id/imageView257"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:button="@drawable/checkbox_round_selector"
+                        android:textColor="@color/whitee" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Every two week"
+                        android:textColor="@color/color_2"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+
+
+                        android:id="@+id/imageView276"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_round_selector"
+
+
+                        android:gravity="right"
+                        android:textColor="@color/whitee" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Every month"
+                        android:textColor="@color/color_2"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="25dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:lineHeight="21sp"
+            android:lineSpacingExtra="3sp"
+            android:text="Fill pick up information"
+            android:textColor="@color/color_1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fill pick up information" />
+
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="2sp"
+                android:text="specify date"
+                android:textColor="#576574"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                android:id="@+id/imageView21"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/f_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:hint="Thursday, May, 7th, 2018"
+
+                    android:id="@+id/date_txt"
+                    android:layout_toLeftOf="@+id/imageView22"
+                    android:lineSpacingExtra="2sp"
+                    android:textColor="#576574"
+                    android:textColorHint="#576574"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/imageView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/calendar"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView231"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="2sp"
+                android:text="specify time"
+                android:textColor="#576574"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                android:id="@+id/imageView221"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/f_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:hint="7:00 to 10:00 AM"
+
+                    android:id="@+id/date_txt2"
+                    android:layout_toLeftOf="@+id/imageView226"
+                    android:lineSpacingExtra="2sp"
+                    android:textColor="#576574"
+                    android:textColorHint="#576574"
+                    android:paddingLeft="10dp"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/imageView226"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/mask_editss"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/imageView1gg6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/line" />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="25dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:lineHeight="21sp"
+            android:lineSpacingExtra="3sp"
+            android:text="Fill pick up information"
+            android:textColor="@color/color_1"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fill pick up information" />
+
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"
+            android:layout_alignParentRight="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>
+

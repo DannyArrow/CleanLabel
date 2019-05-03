@@ -33,6 +33,7 @@ public class ToolbarManager extends AppCompatActivity {
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setElevation(0);
         //enablebackfunctionality(activity);
+
     }
 
 

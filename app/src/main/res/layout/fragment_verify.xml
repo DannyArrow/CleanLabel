@@ -4,138 +4,226 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Verify">
+    android:background="@color/whitee">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        style="@style/textbox"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="257dp"
-        android:layout_marginRight="257dp"
-        android:background="@drawable/textinputborder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
-        <com.google.android.material.textfield.TextInputEditText
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mobno_bg" />
+
+    <include
+        layout="@layout/toolbar_two"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<com.google.android.material.textfield.TextInputLayout-->
+        <!--android:id="@+id/textInputLayout2"-->
+        <!--style="@style/textbox"-->
+        <!--android:layout_width="65dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="37dp"-->
+        <!--android:layout_marginLeft="37dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:layout_marginEnd="257dp"-->
+        <!--android:layout_marginRight="257dp"-->
+        <!--android:background="@drawable/textinputborder"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView12">-->
+
+        <!--<com.google.android.material.textfield.TextInputEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="35dp">-->
+
+        <!--</com.google.android.material.textfield.TextInputEditText>-->
+
+    <!--</com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="24dp"-->
+        <!--android:layout_height="24dp"-->
+
+        <!--android:layout_marginStart="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="12dp"-->
+        <!--android:src="@drawable/united_states"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/ccp"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/ccp"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/ccp" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:layout_width="12dp"-->
+        <!--android:layout_height="7.4dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@drawable/arrow_down"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/ccp"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/ccp"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/ccp" />-->
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/center_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="422dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="5sp"
+            android:text="Let's get started"
+            android:textColor="#222f3e"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Let&apos;s get started" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="2sp"
+            android:text="Please specify your phone number"
+            android:textColor="#576574"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:text="Please specify your phone number." />
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <com.hbb20.CountryCodePicker
 
-        </com.google.android.material.textfield.TextInputEditText>
+                app:textSize="12sp"
 
-    </com.google.android.material.textfield.TextInputLayout>
+                app:defaultCode="1"
 
-    <TextView
-        android:id="@+id/textView8"
+
+
+
+                app:defaultNameCode="US"
+                android:gravity="center_vertical"
+                android:background="@drawable/textinputborder"
+                android:layout_weight="7.5"
+
+
+                android:id="@+id/ccp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3.5"
+                android:id="@+id/textInputLayout7"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+
+
+                android:background="@drawable/textinputborder"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:hint="Enter mobile number"
+                android:inputType="number"
+
+                android:lineSpacingExtra="2sp"
+                android:maxLines="1"
+
+
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+
+                android:textColorHint="@color/number_color"
+
+
+                android:textSize="14sp"
+
+
+                 />
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/btm_lay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="422dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="5sp"
-        android:text="Let's get started"
-        android:textColor="#222f3e"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Let&apos;s get started" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:textColor="#576574"
-        android:textSize="14sp"
-        android:text="Please specify your phone number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:text="Please specify your phone number." />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/bg_6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout7"
-        style="@style/textbox"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="113dp"
-        android:layout_marginLeft="113dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
-        android:background="@drawable/textinputborder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12">
+        <TextView
+            android:id="@+id/txtview"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="33dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="6sp"
+            android:text="Continue"
+            android:textColor="#222f3e"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            tools:text="Continue" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp">
 
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="12dp"
-        android:src="@drawable/united_states"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout2" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="12dp"
-        android:layout_height="7.4dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1"
-        android:src="@drawable/arrow_down"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout2" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="85dp"
-        android:src="@drawable/bg_6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtview"
-        android:layout_width="210dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="33dp"
-        android:fontFamily="@font/sf_pro_display_medium"
-        android:gravity="center_horizontal"
-        android:letterSpacing="0.03"
-        android:lineSpacingExtra="6sp"
-        android:text="Continue"
-        android:textColor="#222f3e"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        tools:text="Continue" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,5 +17,13 @@
     <color name="card_shadow">#29000000</color>
     <color name="mtrl_textinput_default_box_stroke_color">@color/powder_blue</color>
 
+    <color name="color_1">#222f3e</color>
+    <color name="color_2">#576574</color>
+
+    <color name="progress_one">#C2F3FE</color>
+    <color name="progress_two">#1EC7EC</color>
+
+
+
 
 </resources>

@@ -9,12 +9,15 @@
         android:name="com.example.cleanlabel.Fragments.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" >
+
+
         <action
-            android:id="@+id/action_blankFragment_to_login"
-            app:destination="@id/login" />
-        <action
-            android:id="@+id/action_blankFragment_to_registerbtn"
+            android:id="@+id/action_blankFragment_to_registerbtn2"
             app:destination="@id/registerbtn" />
+        <action
+            android:id="@+id/action_blankFragment_to_login2"
+            app:destination="@id/login" />
+
     </fragment>
     <fragment
         android:id="@+id/login"
@@ -22,8 +25,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_mainpage"
-            app:destination="@id/mainpage" />
+            android:id="@+id/action_login_to_prefrence"
+            app:destination="@id/prefrence" />
     </fragment>
     <fragment
         android:id="@+id/verify"
@@ -49,7 +52,7 @@
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_register_to_verify"
+            android:id="@+id/action_registerbtn_to_verify"
             app:destination="@id/verify" />
     </fragment>
     <fragment
@@ -94,17 +97,17 @@
         android:label="fragment_mainpage"
         tools:layout="@layout/fragment_mainpage" >
         <action
-            android:id="@+id/action_mainpage_to_order_History"
-            app:destination="@id/order_History" />
-        <action
-            android:id="@+id/action_mainpage_to_contact_us"
-            app:destination="@id/contact_us" />
-        <action
             android:id="@+id/action_mainpage_to_accountsetting"
             app:destination="@id/accountsetting" />
         <action
             android:id="@+id/action_mainpage_to_referals"
             app:destination="@id/referals" />
+        <action
+            android:id="@+id/action_mainpage_to_order_History"
+            app:destination="@id/order_History" />
+        <action
+            android:id="@+id/action_mainpage_to_contact_us"
+            app:destination="@id/contact_us" />
     </fragment>
     <fragment
         android:id="@+id/referals"
@@ -132,7 +135,7 @@
         android:label="fragment_zip_code"
         tools:layout="@layout/fragment_zip_code" >
         <action
-            android:id="@+id/action_zipCode_to_prefrence2"
+            android:id="@+id/action_zipCode_to_prefrence"
             app:destination="@id/prefrence" />
     </fragment>
 </navigation>

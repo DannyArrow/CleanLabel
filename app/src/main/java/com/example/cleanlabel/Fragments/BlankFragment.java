@@ -77,7 +77,7 @@ ArrayList<ImageView> imglist = new ArrayList<>();
         });
 
 
-        view.findViewById(R.id.button3).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_blankFragment_to_registerbtn)); // register button
+        view.findViewById(R.id.button3).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_blankFragment_to_registerbtn2)); // register button
         view.findViewById(R.id.button2).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.login)); //login button
 
 

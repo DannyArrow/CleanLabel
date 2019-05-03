@@ -40,7 +40,7 @@ public class ZipCode extends androidx.fragment.app.Fragment {
 //        toolbarManager.hideMenu();
 
 
-        view.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_zipCode_to_prefrence2));
+        view.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_zipCode_to_prefrence));
 
 
         return view;

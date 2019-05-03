@@ -1,65 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout6"
+    android:background="@color/whitee"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragments.OrderSummary">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/top_bars"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview22">
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/fourcircle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <include
-            android:id="@+id/imageView19"
-            layout="@layout/three_cicle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView18"
-            app:layout_constraintTop_toTopOf="parent" />
+            layout="@layout/toolbar_fours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-
-        <include
-            android:id="@+id/imageView18"
-            layout="@layout/two_circle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/onecircle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
+        android:layout_marginTop="50dp"
         android:id="@+id/imageView36"
         android:layout_width="0dp"
         android:layout_height="26dp"
@@ -70,12 +34,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/sf_pro_display_regular"
@@ -91,13 +56,15 @@
         tools:text="$15 discount for new customers!" />
 
     <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView21"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/sf_pro_display_regular"
-        android:gravity="center_horizontal"
+
         android:lineHeight="16sp"
         android:lineSpacingExtra="2sp"
         android:text="Location pick up / Drop off"
@@ -110,11 +77,12 @@
 
     <TextView
         android:id="@+id/textView32"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_pro_display_regular"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:lineHeight="16sp"
         android:lineSpacingExtra="2sp"
         android:text="Pick up date and time"
@@ -125,12 +93,14 @@
         tools:text="Pick up date and time" />
 
     <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView34"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_pro_display_regular"
-        android:gravity="center_horizontal"
+
         android:lineHeight="16sp"
         android:lineSpacingExtra="2sp"
         android:text="Pick up date and time"
@@ -148,8 +118,11 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <ImageView
+        android:scaleType="fitXY"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/imageView37"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:src="@drawable/address_box"
@@ -157,8 +130,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <ImageView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitXY"
         android:id="@+id/imageView39"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:src="@drawable/address_box"
@@ -166,8 +142,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
     <ImageView
+        android:scaleType="fitXY"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/imageView41"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:src="@drawable/address_box"
@@ -196,13 +175,15 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView39"
         app:layout_constraintTop_toTopOf="@+id/imageView39" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:gravity="center_horizontal"
+       android:paddingLeft="10dp"
         android:lineHeight="14sp"
         android:lineSpacingExtra="2sp"
         android:text="20 Coolidge Avenue, White Plains, NY 10606"
@@ -213,14 +194,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView37"
         tools:text="20 Coolidge Avenue, White Plains, NY 10606" />
 
-    <TextView
+    <EditText
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView33"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+
         android:fontFamily="@font/sf_pro_display_medium"
-        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
         android:lineHeight="14sp"
         android:lineSpacingExtra="2sp"
         android:text="Thurs, May 4th 7:00 to 10:00 pm"
@@ -231,14 +214,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView39"
         tools:text="Thurs, May 4th 7:00 to 10:00 pm" />
 
-    <TextView
+    <EditText
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView36"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+
         android:fontFamily="@font/sf_pro_display_medium"
-        android:gravity="center_horizontal"
+       android:paddingLeft="10dp"
         android:lineHeight="14sp"
         android:lineSpacingExtra="2sp"
         android:text="Thurs, May 4th 7:00 to 10:00 pm"
@@ -261,8 +246,10 @@
         app:layout_constraintTop_toTopOf="@+id/imageView41" />
 
     <ImageView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/imageView34"
-        android:layout_width="323dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:src="@drawable/blue_line"
@@ -270,12 +257,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView41" />
 
     <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView35"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:fontFamily="@font/sf_pro_display_bold"
-        android:gravity="center_horizontal"
+
         android:lineHeight="21sp"
         android:lineSpacingExtra="3sp"
         android:text="Order summary"
@@ -289,8 +278,8 @@
         android:id="@+id/imageView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/box_summary"
         app:layout_constraintStart_toStartOf="parent"
@@ -300,8 +289,8 @@
         android:id="@+id/imageView45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/box_summary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView43" />
@@ -354,18 +343,24 @@
 
     <TextView
         android:id="@+id/textView39"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="58dp"
+
+        android:layout_marginTop="64dp"
+
+
+        android:drawableEnd="@drawable/arrow_path"
+        android:drawableRight="@drawable/arrow_path"
         android:fontFamily="@font/sf_pro_display_bold"
-        android:gravity="center_horizontal"
+        android:gravity="center_vertical"
         android:lineHeight="16sp"
         android:lineSpacingExtra="2sp"
         android:text="$0.99"
         android:textColor="#222f3e"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toEndOf="@+id/textView38"
         app:layout_constraintTop_toBottomOf="@+id/imageView34"
         tools:text="$0.99" />
@@ -374,9 +369,11 @@
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="24dp"
+
+        android:layout_marginTop="28dp"
+
+        android:drawableEnd="@drawable/arrow_path"
+        android:drawableRight="@drawable/arrow_path"
         android:fontFamily="@font/sf_pro_display_bold"
         android:gravity="center_horizontal"
         android:lineHeight="16sp"
@@ -384,20 +381,13 @@
         android:text="$1.50"
         android:textColor="#222f3e"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toEndOf="@+id/textView41"
         app:layout_constraintTop_toBottomOf="@+id/textView39"
         tools:text="$1.50" />
 
-    <ImageView
-        android:id="@+id/imageView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="64dp"
-        android:src="@drawable/arrow_path"
-        app:layout_constraintStart_toEndOf="@+id/textView39"
-        app:layout_constraintTop_toBottomOf="@+id/imageView34" />
+
 
     <TextView
         android:id="@+id/textView42"
@@ -429,23 +419,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="442dp" />
 
-    <ImageView
-        android:id="@+id/imageView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="34dp"
-        android:src="@drawable/arrow_path"
-        app:layout_constraintStart_toEndOf="@+id/textView40"
-        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+
 
     <ImageView
         android:id="@+id/imageView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
+
         android:src="@drawable/no_button"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/imageView45" />
@@ -454,8 +434,7 @@
         android:id="@+id/imageView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
+
         android:layout_marginTop="10dp"
         android:src="@drawable/no_button"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -534,5 +513,55 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtview22">
 
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fourcircle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/imageView19"
+            layout="@layout/three_cicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <include
+            android:id="@+id/imageView18"
+            layout="@layout/two_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/onecircle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

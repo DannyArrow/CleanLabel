@@ -1,101 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout5"
+    android:background="@color/whitee"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragments.ScheduleDelivery"
+    android:layout_height="match_parent">
 
-    >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+    <LinearLayout
+        android:id="@+id/top_bars"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview22">
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/fourcircle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/threecircle"
-            app:layout_constraintStart_toEndOf="@+id/imageView18"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <include
-            android:id="@+id/imageView18"
-            layout="@layout/two_circle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
-            app:layout_constraintTop_toTopOf="parent" />
+            layout="@layout/toolbar_fours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        android:id="@+id/imageView29"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/address_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:hint="Thursday, May, 7th, 2018"
+            android:id="@+id/date1_txt"
+            android:layout_toLeftOf="@+id/imageView244"
+            android:lineSpacingExtra="2sp"
+            android:textColor="#576574"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:textColorHint="#576574"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView244"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/onecircle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/calendar"
+            />
 
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/address_box"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    </RelativeLayout>
+
+
 
     <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:text="Thursday, May, 7th, 2018"
-        android:textColor="#576574"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
-        app:layout_constraintStart_toStartOf="@+id/imageView29"
-        app:layout_constraintTop_toTopOf="@+id/imageView29"
-        tools:text="Thursday, May, 7th, 2018" />
-
-    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView27"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:gravity="center_horizontal"
         android:lineHeight="24sp"
         android:lineSpacingExtra="4sp"
         android:text="Please fill Drop off information"
@@ -104,36 +77,64 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/imageView28" />
 
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/box_check"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
 
-    <ImageView
-        android:id="@+id/imageView26"
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+    app:layout_constraintStart_toStartOf="@+id/guideline3"
+    app:layout_constraintTop_toBottomOf="@+id/imageView23"
+        android:id="@+id/check_box"
+        android:gravity="right"
+        android:layout_gravity="right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/check"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView27"
-        app:layout_constraintEnd_toEndOf="@+id/imageView27"
-        app:layout_constraintStart_toStartOf="@+id/imageView27"
-        app:layout_constraintTop_toTopOf="@+id/imageView27" />
+        android:layout_marginRight="15dp">
+
+
+        <CheckBox
+            android:checked="true"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/whitee"
+            android:button="@drawable/checkbox_selector"/>
+
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView14555"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@drawable/box_check" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView1555"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@drawable/check" />-->
+    </RelativeLayout>
 
     <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="60dp"
         android:id="@+id/textView22"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sf_pro_display_medium"
-        android:gravity="center_horizontal"
+
         android:lineHeight="24sp"
         android:lineSpacingExtra="4sp"
         android:text="Please fill pick up information"
         android:textColor="#222f3e"
         android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/top_bars"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,10 +147,11 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:lineSpacingExtra="2sp"
         android:text="Please specify date"
         android:textColor="#576574"
@@ -158,13 +160,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView28"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
+
+
         android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
+
         android:lineSpacingExtra="2sp"
         android:text="Please specify date"
         android:textColor="#576574"
@@ -173,25 +177,62 @@
         app:layout_constraintTop_toBottomOf="@+id/textView27"
         tools:text="Please specify date" />
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/address_box"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:src="@drawable/calendar"
-        app:layout_constraintEnd_toEndOf="@+id/imageView21"
-        app:layout_constraintTop_toTopOf="@+id/imageView21" />
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        android:id="@+id/imageView21"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/address_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+
+            android:hint="Thursday, May, 7th, 2018"
+
+            android:id="@+id/date_txt"
+            android:layout_toLeftOf="@+id/imageView22"
+            android:lineSpacingExtra="2sp"
+            android:textColor="#576574"
+            android:textColorHint="#576574"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/calendar"
+            />
+
+
+    </RelativeLayout>
+
+    <!--<ImageView-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:id="@+id/imageView21"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:src="@drawable/address_box"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/guideline3"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView23" />-->
+
+    <!--<ImageVi/onstraintTop_toTopOf="@+id/imageView21" />-->
 
     <ImageView
         android:id="@+id/imageView30"
@@ -204,29 +245,31 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView29"
         app:layout_constraintTop_toTopOf="@+id/imageView29" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:textColor="#576574"
-        android:textSize="12sp"
-        android:text="Thursday, May, 7th, 2018"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView21"
-        app:layout_constraintStart_toStartOf="@+id/imageView21"
-        app:layout_constraintTop_toTopOf="@+id/imageView21"
-        tools:text="Thursday, May, 7th, 2018" />
+    <!--<TextView-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginTop="9dp"-->
+        <!--android:layout_marginBottom="9dp"-->
+
+        <!--android:lineSpacingExtra="2sp"-->
+        <!--android:textColor="#576574"-->
+        <!--android:textSize="12sp"-->
+        <!--android:text="Thursday, May, 7th, 2018"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/imageView21"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/imageView21"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/imageView21"-->
+        <!--tools:text="Thursday, May, 7th, 2018" />-->
 
     <TextView
         android:id="@+id/textView25"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:lineSpacingExtra="2sp"
         android:text="Specify time"
         android:textColor="#576574"
@@ -236,11 +279,13 @@
         tools:text="Specify time" />
 
     <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/textView30"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:gravity="center_horizontal"
+
         android:lineSpacingExtra="2sp"
         android:text="Specify time"
         android:textColor="#576574"
@@ -249,39 +294,96 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView29"
         tools:text="Specify time" />
 
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:src="@drawable/address_box"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+    <!--<ImageView-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:id="@+id/imageView23"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:src="@drawable/address_box"-->
+        <!--/>-->
 
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:textColor="#576574"
-        android:textSize="12sp"
-        android:text="7:00 PM to 10:00 AM"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
-        app:layout_constraintStart_toStartOf="@+id/imageView23"
-        app:layout_constraintTop_toTopOf="@+id/imageView23"
-    />
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
         android:layout_marginTop="5dp"
         android:src="@drawable/address_box"
+        android:id="@+id/imageView23"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_bg">
+        <Spinner
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/spinner"
+            android:textColor="#576574"
+            android:textSize="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            />
+    </RelativeLayout>
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView31"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:paddingLeft="5dp"-->
+
+        <!--android:lineSpacingExtra="2sp"-->
+        <!--android:textColor="#576574"-->
+        <!--android:textSize="12sp"-->
+        <!--android:text="7:00 PM to 10:00 AM"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/imageView23"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/imageView23"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/imageView23"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:id="@+id/imageView31"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:src="@drawable/address_box"-->
+       <!--/>-->
+
+    <RelativeLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/address_box"
+        android:id="@+id/imageView31"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_bg">
+        <Spinner
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/spinner1"
+            android:textColor="#576574"
+            android:textSize="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView32"
@@ -294,16 +396,16 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView31"
         app:layout_constraintTop_toTopOf="@+id/imageView31" />
 
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:src="@drawable/down_arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
-        app:layout_constraintEnd_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toTopOf="@+id/imageView23" />
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView25"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:src="@drawable/down_arrow"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/imageView23"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/imageView23"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/imageView23" />-->
 
     <TextView
         android:id="@+id/textView26"
@@ -317,43 +419,45 @@
         android:text="Leave laundry with the doorman?"
         android:textColor="#576574"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintStart_toEndOf="@+id/check_box"
         app:layout_constraintTop_toBottomOf="@+id/imageView23" />
 
     <ImageView
+        android:scaleType="fitXY"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/imageView28"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:src="@drawable/linetwo"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="2sp"
-        android:textColor="#576574"
-        android:textSize="12sp"
-        android:text="7:00 PM to 10:00 AM"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView31"
-        app:layout_constraintStart_toStartOf="@+id/imageView31"
-        app:layout_constraintTop_toTopOf="@+id/imageView31"
-       />
 
-    <ImageView
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView31"
         android:id="@+id/imageView33"
+        android:gravity="right"
+        android:layout_gravity="right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/rectangle_box"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+        android:layout_marginRight="15dp">
+
+
+    <CheckBox
+        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="@color/whitee"
+        android:button="@drawable/checkbox_selector"/>
+    </RelativeLayout>
+
+
 
     <TextView
         android:id="@+id/textView57"
@@ -406,6 +510,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
 
+        app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtview22">
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fourcircle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/threecircle"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <include
+            android:id="@+id/imageView18"
+            layout="@layout/two_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/onecircle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
