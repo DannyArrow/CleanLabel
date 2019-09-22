@@ -83,52 +83,41 @@
             app:destination="@id/payment" />
     </fragment>
     <fragment
-        android:id="@+id/payment"
-        android:name="com.example.cleanlabel.Fragments.Payment"
-        android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" >
-        <action
-            android:id="@+id/action_payment_to_mainpage"
-            app:destination="@id/mainpage" />
-    </fragment>
-    <fragment
         android:id="@+id/mainpage"
         android:name="com.example.cleanlabel.Fragments.Mainpage"
         android:label="fragment_mainpage"
-        tools:layout="@layout/fragment_mainpage" >
-        <action
-            android:id="@+id/action_mainpage_to_accountsetting"
-            app:destination="@id/accountsetting" />
+        tools:layout="@layout/order_activity" >
         <action
             android:id="@+id/action_mainpage_to_referals"
             app:destination="@id/referals" />
         <action
-            android:id="@+id/action_mainpage_to_order_History"
-            app:destination="@id/order_History" />
+            android:id="@+id/action_mainpage_to_frequency"
+            app:destination="@id/frequency" />
         <action
-            android:id="@+id/action_mainpage_to_contact_us"
-            app:destination="@id/contact_us" />
+            android:id="@+id/action_mainpage_to_subscription"
+            app:destination="@id/subscription" />
     </fragment>
     <fragment
         android:id="@+id/referals"
         android:name="com.example.cleanlabel.Fragments.Referals"
         android:label="fragment_referals"
-        tools:layout="@layout/fragment_referals" />
+        tools:layout="@layout/referandearn_activity" />
     <fragment
-        android:id="@+id/order_History"
-        android:name="com.example.cleanlabel.Fragments.Order_History"
-        android:label="fragment_order__history"
-        tools:layout="@layout/fragment_order__history" />
-    <fragment
-        android:id="@+id/accountsetting"
-        android:name="com.example.cleanlabel.Fragments.accountsetting"
-        android:label="fragment_accountsetting"
-        tools:layout="@layout/fragment_accountsetting" />
-    <fragment
-        android:id="@+id/contact_us"
-        android:name="com.example.cleanlabel.Fragments.contact_us"
-        android:label="fragment_contact_us"
-        tools:layout="@layout/fragment_contact_us" />
+        android:id="@+id/Frequency"
+        android:name="com.example.cleanlabel.Fragments.Frequency"
+        android:label="fragment_frequency"
+        tools:layout="@layout/frequency_activity"/>
+
+    <fragment android:id="@+id/payment"
+        android:name="com.example.cleanlabel.Fragments.Payment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_payment_to_mainpage"
+            app:destination="@id/mainpage" />
+    </fragment>
+
+
     <fragment
         android:id="@+id/zipCode"
         android:name="com.example.cleanlabel.Fragments.ZipCode"
@@ -138,4 +127,11 @@
             android:id="@+id/action_zipCode_to_prefrence"
             app:destination="@id/prefrence" />
     </fragment>
+
+    <fragment
+        android:id="@+id/subscription"
+        android:name="com.example.cleanlabel.Fragments.Subscription"
+        android:label="fragment_subscription"
+        tools:layout="@layout/subsribe_activity"/>
+
 </navigation>

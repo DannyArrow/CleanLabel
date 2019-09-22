@@ -13,11 +13,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/verification_bg" />
 
-    <include
-        layout="@layout/toolbar_two"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -94,7 +89,7 @@
                 app:pinHeight="40dp"
                 app:pinLength="4"
                 app:cursorVisible="false"
-                app:forceKeyboard="true"
+                app:forceKeyboard="false"
                 android:textColor="#222f3e"
                 app:password="false"/>
         </LinearLayout>

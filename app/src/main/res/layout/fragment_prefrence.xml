@@ -5,18 +5,12 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/whitee"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <include
-            layout="@layout/toolbar_fours"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/top_lay"
@@ -28,8 +22,8 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/sf_pro_display_medium"
                 android:gravity="center_horizontal"

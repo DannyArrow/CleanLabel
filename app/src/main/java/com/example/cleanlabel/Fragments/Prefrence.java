@@ -4,6 +4,8 @@ package com.example.cleanlabel.Fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -28,7 +30,6 @@ import org.json.JSONArray;
  */
 public class Prefrence extends Fragment {
     ImageView imageView4;
-    TextView titles;
     RecyclerView recyclerview;
     TextView txtview22;
     ImageView imageView45;
@@ -42,23 +43,17 @@ public class Prefrence extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_prefrence, container, false);
-        view.findViewById(R.id.viewnext).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_prefrence_to_scheduleDelivery));
+        //view.findViewById(R.id.viewnext).setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_prefrence_to_scheduleDelivery));
 
+        setHasOptionsMenu(true);
 
-        imageView4= view.findViewById(R.id.imageView4);
 
         imageView45= view.findViewById(R.id.imageView45);
 
         txtview22= view.findViewById(R.id.txtview22);
 
-        titles= view.findViewById(R.id.titles);
-        titles.setText("Preferences");
-        imageView4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
+
         recyclerview= view.findViewById(R.id.recyclerview);
         JSONArray data=new JSONArray();
         CustomAdapter horizontalAdapter=new CustomAdapter(data);
@@ -68,14 +63,6 @@ public class Prefrence extends Fragment {
         recyclerview.setAdapter(horizontalAdapter);
 
         txtview22.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_prefrence_to_scheduleDelivery));
-
-        imageView45.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
 
 
         // Get reference of widgets from XML layout
@@ -97,5 +84,12 @@ public class Prefrence extends Fragment {
 
         return view;
     }
+
+
+
+//    @Override
+//    public void onCreateOptionsMenu (Menu menu, MenuInflater inflater){
+//        inflater.inflate(R.menu.menu, menu);
+//    }
 
 }

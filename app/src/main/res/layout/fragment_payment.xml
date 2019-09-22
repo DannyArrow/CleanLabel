@@ -13,20 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/top_bars"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <include
-                layout="@layout/toolbar_fours"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+
 
 
         <LinearLayout
@@ -424,21 +412,21 @@
                 android:textSize="14sp"
                 tools:text="Save this card for future payments." />
         </LinearLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="15dp"
 
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/frameLayout78"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/whitee"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="370dp">
 
             <include
                 android:id="@+id/include"
                 layout="@layout/place_orderbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 

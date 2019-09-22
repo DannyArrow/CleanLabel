@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Clean Label</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Clean Wash</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_settings">FQA</string>
@@ -15,5 +21,7 @@
     <string name="register_txt">Sign up today, for free!</string>
     <string name="facebook_app_id">274064250210325</string>
     <string name="fb_login_protocol_scheme">fb274064250210325</string>
+    <string name="new_game">Homepage</string>
+    <string name="help">FQA</string>
 
 </resources>

@@ -17,7 +17,8 @@ public class Validation implements TextWatcher {
     private static Register context;
     private View view;
     private TextInputLayout textInputLayout;
-    private String password;
+    private static String name = "";
+    private static String email = "";
 
     public Validation(View view, Register context, TextInputLayout textInputLayout) {
         this.view = view;
@@ -25,12 +26,7 @@ public class Validation implements TextWatcher {
         this.textInputLayout = textInputLayout;
     }
 
-    public Validation(View view, Register context, TextInputLayout textInputLayout, String password) {
-        this.view = view;
-        this.context = context;
-        this.textInputLayout = textInputLayout;
-        this.password = password;
-    }
+
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -50,34 +46,14 @@ public class Validation implements TextWatcher {
             case R.id.editemail:
                 TextInputEditText inputEditText = view.findViewById(R.id.editemail);
                 validateEmail(inputEditText,textInputLayout);
-                break;
-            case R.id.editpasseord:
 
-                TextInputEditText inputEditText1 = view.findViewById(R.id.editpasseord);
-                validatePassword(inputEditText1,textInputLayout);
-                break;
-            case R.id.editconfirmpass:
-                validateconfirm_password((EditText) view.findViewById(R.id.editconfirmpass),textInputLayout);
         }
     }
 
 
+    private static String validateName(EditText editText, TextInputLayout inputLayoutName) {
+           name = editText.getText().toString().trim();
 
-    public boolean validateconfirm_password(EditText editText, TextInputLayout inputLayoutName){
-        if(!editText.getText().toString().trim().equals(password)){
-            inputLayoutName.setError("doesn't match password");
-            requestFocus(editText);
-            return false;
-        } else {
-            inputLayoutName.setErrorEnabled(false);
-            return true;
-        }
-
-    }
-
-
-    public static String validateName(EditText editText, TextInputLayout inputLayoutName) {
-        String name = editText.getText().toString().trim();
         if (name.isEmpty()) {
             inputLayoutName.setError("please enter name");
             requestFocus(editText);
@@ -86,12 +62,16 @@ public class Validation implements TextWatcher {
             inputLayoutName.setErrorEnabled(false);
             return name;
         }
-
-
     }
 
-    public String validateEmail(TextInputEditText editText, TextInputLayout textInputEditText) {
-        String email = editText.getText().toString().trim();
+    public static boolean validateName(){
+        return name.isEmpty();
+    }
+
+
+
+    private String validateEmail(TextInputEditText editText, TextInputLayout textInputEditText) {
+         email = editText.getText().toString().trim();
 
         if (email.isEmpty() || !isValidEmail(email)) {
             textInputEditText.setError("invalid email");
@@ -105,20 +85,14 @@ public class Validation implements TextWatcher {
 
     }
 
-    public String validatePassword(TextInputEditText editText,TextInputLayout inputLayoutPassword) {
-        String password = editText.getText().toString().trim();
-        if (password.isEmpty() || editText.getText().toString().length() > 6) {
-            inputLayoutPassword.setError("Password must be at least 6 character");
-            requestFocus(inputLayoutPassword);
-            return null;
-        } else {
-            inputLayoutPassword.setErrorEnabled(false);
-            return password;
-        }
+
+    private static boolean isValidEmail(String email) {
+        return !TextUtils.isEmpty(email) || android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
-    public static boolean isValidEmail(String email) {
-        return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    public static boolean isValidEmail() {
+        return email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+
     }
 
     private static void requestFocus(View view) {

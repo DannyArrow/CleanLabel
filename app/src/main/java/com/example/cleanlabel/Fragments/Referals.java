@@ -28,7 +28,7 @@ public class Referals extends androidx.fragment.app.Fragment {
 //        ToolbarManager toolbarManager = ToolbarManager.getInstance();
 //        toolbarManager.setTitle("Referals");
 //        toolbarManager.show_backbutton();
-        return inflater.inflate(R.layout.fragment_referals, container, false);
+        return inflater.inflate(R.layout.referandearn_activity, container, false);
     }
 
 }

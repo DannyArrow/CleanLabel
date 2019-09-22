@@ -31,11 +31,11 @@ import androidx.navigation.Navigation;
  * A simple {@link androidx.fragment.app.Fragment} subclass.
  */
 public class BlankFragment extends androidx.fragment.app.Fragment {
-ArrayList<ImageView> imglist = new ArrayList<>();
    private Drawable selected_indicator;
    private Drawable unselected_indicator;
    private Button signIn;
    private Button signUp;
+    ArrayList<ImageView> imglist;
 
     public BlankFragment() {
         // Required empty public constructor
@@ -47,6 +47,9 @@ ArrayList<ImageView> imglist = new ArrayList<>();
 
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        imglist = new ArrayList<>();
+        imglist.clear();
+
         ImageView indicator_1 = view.findViewById(R.id.imageView8);
         ImageView indicator_2 = view.findViewById(R.id.imageView9);
         ImageView indicator_3 = view.findViewById(R.id.imageView10);
@@ -56,13 +59,14 @@ ArrayList<ImageView> imglist = new ArrayList<>();
         imglist.add(indicator_2);
         imglist.add(indicator_3);
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        viewPager.setAdapter(new CustomPagerAdapter(getFragmentManager()));
+        CustomPagerAdapter customPagerAdapter = new CustomPagerAdapter(getChildFragmentManager());
+        viewPager.setAdapter(customPagerAdapter);
         selected_indicator = ContextCompat.getDrawable(getActivity(), R.drawable.indicator);
-        unselected_indicator = ContextCompat.getDrawable(getContext(), R.drawable.unselectedindicator);
+        unselected_indicator = ContextCompat.getDrawable(getActivity(), R.drawable.unselectedindicator);
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override
@@ -72,7 +76,6 @@ ArrayList<ImageView> imglist = new ArrayList<>();
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
             }
         });
 

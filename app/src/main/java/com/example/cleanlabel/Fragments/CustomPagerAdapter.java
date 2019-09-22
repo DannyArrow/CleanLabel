@@ -5,12 +5,14 @@ import com.example.cleanlabel.Fragments.Onboarding.Onboarding_two;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
-public class CustomPagerAdapter extends androidx.fragment.app.FragmentPagerAdapter {
+public class CustomPagerAdapter extends FragmentStatePagerAdapter {
 
 
     public CustomPagerAdapter(FragmentManager fm) {
         super(fm);
+
     }
 
     @Override

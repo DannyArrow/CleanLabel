@@ -59,7 +59,7 @@ public class Validatepasswordimpl implements Validatepassword, TextWatcher {
     @Override
     public void show_errorforconfirm_password(String error_message,TextInputLayout textInputLayout) {
         textInputLayout.setCounterEnabled(false);
-        textInputLayout.setPasswordVisibilityToggleEnabled(false);
+        textInputLayout.setPasswordVisibilityToggleEnabled(true);
         textInputLayout.setErrorEnabled(true);
         textInputLayout.setError(error_message);
     }
@@ -71,15 +71,16 @@ public class Validatepasswordimpl implements Validatepassword, TextWatcher {
 
     @Override
     public boolean validate_password(String pass, String confirmPass) {
-        if(pass.equals(confirmPass)){
-            return true;
-        }
-        return false;
+        return pass.equals(confirmPass);
     }
+
 
     @Override
     public boolean validate_password() {
-        return false;
+        String password = editpassword.getText().toString().trim();
+        String confirmpass = edit_passwordconfirm.getText().toString().trim();
+
+        return  password.length() >= 6 && confirmpass.length() >= 6 && password.equals(confirmpass);
     }
 
     @Override
@@ -124,7 +125,7 @@ public class Validatepasswordimpl implements Validatepassword, TextWatcher {
         if (edit_passwordconfirm.hasFocus()) {
             Log.d("has focus", " confirm password has focus");
             if (edit_passwordconfirm.getText().toString().trim().length() <= 6 && !edit_passwordconfirm.getText().toString().trim().isEmpty()) {
-                show_toggle_error(confirmpasswordLayout_text,"invalid password");
+                show_toggle_error(confirmpasswordLayout_text,"needs 6 characters");
             }
         }
 
@@ -132,7 +133,7 @@ public class Validatepasswordimpl implements Validatepassword, TextWatcher {
         if (editpassword.hasFocus()) {
             Log.d("has focus", " password has focus");
             if (editpassword.getText().toString().trim().length() <= 6 && !editpassword.getText().toString().trim().isEmpty()) {
-                show_toggle_error(passwordLayout_text,"invalid password");
+                show_toggle_error(passwordLayout_text,"needs 6 characters");
             } else{
                 unshow_toggle_error(passwordLayout_text);
             }

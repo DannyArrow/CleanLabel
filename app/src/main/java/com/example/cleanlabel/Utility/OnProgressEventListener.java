@@ -6,4 +6,6 @@ public interface OnProgressEventListener {
 
     public void Toast_Message_Error(String msg);
 
+    public void sucessfully_login();
+
 }

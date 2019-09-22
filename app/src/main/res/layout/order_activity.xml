@@ -16,15 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <include
-            layout="@layout/toolbar_fours"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+
     </LinearLayout>
     <TextView
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="0dp"
         android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +30,7 @@
         android:gravity="center_horizontal"
         android:lineHeight="16sp"
         android:lineSpacingExtra="2sp"
-        android:text="Subscribe to get more benifits!"
+        android:text="Subscribe to get more benefits!"
         android:textColor="@color/whitee"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -289,13 +286,13 @@
 
             android:src="@drawable/line" />
         <LinearLayout
-            android:id="@+id/washcleanbasic"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:padding="10dp"
+                android:id="@+id/wash_basic"
                 android:layout_width="match_parent"
                 android:layout_height="45dp">
 
@@ -347,6 +344,7 @@
 
             <RelativeLayout
                 android:padding="10dp"
+                android:id="@+id/washplus"
                 android:layout_width="match_parent"
                 android:layout_height="45dp">
 
@@ -398,6 +396,7 @@
 
             <RelativeLayout
                 android:padding="10dp"
+                android:id="@+id/washpremium"
                 android:layout_width="match_parent"
                 android:layout_height="45dp">
 
@@ -449,6 +448,7 @@
 
             <RelativeLayout
                 android:padding="10dp"
+                android:id="@+id/frequency"
                 android:layout_width="match_parent"
                 android:layout_height="45dp">
 
@@ -518,6 +518,7 @@
             android:layout_height="wrap_content">
 
             <RelativeLayout
+                android:id="@+id/prefrence"
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="45dp">
@@ -590,6 +591,7 @@
             android:layout_height="wrap_content">
 
             <RelativeLayout
+                android:id="@+id/invite_friends"
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="45dp">

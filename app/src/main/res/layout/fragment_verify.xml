@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="@color/whitee">
 
@@ -12,64 +13,58 @@
         android:layout_height="match_parent"
         android:background="@drawable/mobno_bg" />
 
-    <include
-        layout="@layout/toolbar_two"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
 
     <!--<com.google.android.material.textfield.TextInputLayout-->
-        <!--android:id="@+id/textInputLayout2"-->
-        <!--style="@style/textbox"-->
-        <!--android:layout_width="65dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="37dp"-->
-        <!--android:layout_marginLeft="37dp"-->
-        <!--android:layout_marginTop="30dp"-->
-        <!--android:layout_marginEnd="257dp"-->
-        <!--android:layout_marginRight="257dp"-->
-        <!--android:background="@drawable/textinputborder"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/textView12">-->
+    <!--android:id="@+id/textInputLayout2"-->
+    <!--style="@style/textbox"-->
+    <!--android:layout_width="65dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="37dp"-->
+    <!--android:layout_marginLeft="37dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:layout_marginEnd="257dp"-->
+    <!--android:layout_marginRight="257dp"-->
+    <!--android:background="@drawable/textinputborder"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/textView12">-->
 
-        <!--<com.google.android.material.textfield.TextInputEditText-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="35dp">-->
+    <!--<com.google.android.material.textfield.TextInputEditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="35dp">-->
 
-        <!--</com.google.android.material.textfield.TextInputEditText>-->
+    <!--</com.google.android.material.textfield.TextInputEditText>-->
 
     <!--</com.google.android.material.textfield.TextInputLayout>-->
 
 
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView2"-->
+    <!--android:layout_width="24dp"-->
+    <!--android:layout_height="24dp"-->
+
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:layout_marginBottom="12dp"-->
+    <!--android:src="@drawable/united_states"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/ccp"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/ccp"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/ccp" />-->
 
     <!--<ImageView-->
-        <!--android:id="@+id/imageView2"-->
-        <!--android:layout_width="24dp"-->
-        <!--android:layout_height="24dp"-->
-
-        <!--android:layout_marginStart="10dp"-->
-        <!--android:layout_marginLeft="10dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginBottom="12dp"-->
-        <!--android:src="@drawable/united_states"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/ccp"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/ccp"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/ccp" />-->
-
-    <!--<ImageView-->
-        <!--android:id="@+id/imageView3"-->
-        <!--android:layout_width="12dp"-->
-        <!--android:layout_height="7.4dp"-->
-        <!--android:layout_marginTop="12dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginRight="8dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:src="@drawable/arrow_down"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/ccp"-->
-        <!--app:layout_constraintEnd_toEndOf="@+id/ccp"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/ccp" />-->
-
+    <!--android:id="@+id/imageView3"-->
+    <!--android:layout_width="12dp"-->
+    <!--android:layout_height="7.4dp"-->
+    <!--android:layout_marginTop="12dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@drawable/arrow_down"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/ccp"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/ccp"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/ccp" />-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,13 +72,10 @@
         android:id="@+id/center_lay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-
-
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
@@ -118,50 +110,49 @@
             tools:text="Please specify your phone number." />
 
         <LinearLayout
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
             <com.hbb20.CountryCodePicker
 
-                app:textSize="12sp"
+                android:id="@+id/ccp"
+
+                android:layout_width="match_parent"
+
+
+                android:layout_height="40dp"
+                android:layout_weight="7.5"
+                android:background="@drawable/textinputborder"
+                android:gravity="center_vertical"
+
 
                 app:defaultCode="1"
-
-
-
-
                 app:defaultNameCode="US"
-                android:gravity="center_vertical"
-                android:background="@drawable/textinputborder"
-                android:layout_weight="7.5"
-
-
-                android:id="@+id/ccp"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                app:textSize="12sp" />
 
             <EditText
-                android:layout_marginLeft="10dp"
-                android:layout_weight="3.5"
                 android:id="@+id/textInputLayout7"
-
-
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
 
+
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3.5"
 
 
                 android:background="@drawable/textinputborder"
                 android:fontFamily="@font/sf_pro_display_regular"
                 android:hint="Enter mobile number"
                 android:inputType="number"
+
 
                 android:lineSpacingExtra="2sp"
                 android:maxLines="1"
@@ -176,12 +167,8 @@
                 android:textSize="14sp"
 
 
-                 />
+                />
         </LinearLayout>
-
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
